@@ -65,8 +65,8 @@ def delay(time):
     return time * 0
 
 
-def mozart_eine_kleine_nachtmusik():
-    base_octave = 3 * int(fs/output_fs)
+def mozart_eine_kleine_nachtmusik(octave):
+    base_octave = octave * int(fs/output_fs)
 
     # play Mozart's Eine Kleine Nachtmusik
     sound = np.array([], dtype=np.float32)
@@ -141,4 +141,4 @@ def mozart_eine_kleine_nachtmusik():
     sd.wait()
     write("mozart_eine_kleine_nachtmusik_python(mochahadeh.com).wav", output_fs, sound)
 
-mozart_eine_kleine_nachtmusik()
+mozart_eine_kleine_nachtmusik(3)
